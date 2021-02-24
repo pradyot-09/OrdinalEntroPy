@@ -12,21 +12,21 @@ The package consists of following entropy methods:
 Installation
 ============
 
-.. important::
+important:
 
   Currently OrdinalEntroPy is not part of pip repository, therefore you cannot install it using pip or conda.
 
-.. code-block:: shell
+```shell
 
   git clone https://github.com/pradyot-09/OrdinalEntroPy.git /
   cd OrdinalEntroPy/
   pip install -r requirements.txt
   python setup.py develop
-  
+```  
   **Dependencies**
 
-- `numpy <https://numpy.org/>`_
-- `scipy <https://www.scipy.org/>`_
+- `numpy <https://numpy.org/>`
+- `scipy <https://www.scipy.org/>`
 
 
 Development
