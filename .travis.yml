@@ -13,6 +13,7 @@ install:
   
 script:
   - pytest --cov
+  - cd tests
+  - python -m unittest test_OrdinalEntroPy.TestEntropy
 
-notifications:
-    email: pradyotpatil@gmail.com
+
