@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.stats import norm
+import math
 
 def cal_weights(values):
   sum = 0
@@ -24,12 +25,14 @@ def get_weights(values,order,delay):
     raise ValueError("Delay has to be at least 1.")
   if order < 2:
     raise ValueError("Order has to be at least 2.")
-  permutations = np.array([[values[i+ord*delay] for ord in range(order)] for i in range(len(values) - delay*(order + 1))])
+  permutations = np.array([[values[i+ord*delay] for ord in range(order)] for i in range(len(values) - delay*(order - 1))])
   weights = list(map(cal_weights,permutations))
   return weights
 
 # function to convert the time series in normal distribution
 def get_ncdf_values(values,classes):
+  if classes<2:
+    raise ValueError("Number of classes has to be at least 2.")  
   norm_values = norm.cdf(values,loc=np.mean(values),scale=np.std(values))
   mapped_values = np.array([round(classes*i + 0.5) for i in norm_values])
   return mapped_values
@@ -43,12 +46,12 @@ def get_str_permutation(values,order,delay):
     raise ValueError("Delay has to be at least 1.")
   if order < 2:
     raise ValueError("Order has to be at least 2.") 
-  mapped_permutations = np.array([[values[i+ord*delay] for ord in range(order)] for i in range(len(values) - delay*(order + 1))])
+  mapped_permutations = np.array([[values[i+ord*delay] for ord in range(order)] for i in range(len(values) - delay*(order - 1))])
   str_permutations = list(map(str,mapped_permutations))
   return str_permutations
 
 # function to convert array of permutations to string for ordinal entropies
-def get_str_permutation_ordinal(values,order):
+def get_str_permutation_ordinal(values,order,delay):
   N = len(values)  
   if order * delay > N:
     raise ValueError("Error: order * delay should be lower than x.size")
@@ -56,7 +59,7 @@ def get_str_permutation_ordinal(values,order):
     raise ValueError("Delay has to be at least 1.")
   if order < 2:
     raise ValueError("Order has to be at least 2.")  
-  mapped_permutations = np.array([np.argsort([values[i+ord*delay] for ord in range(order)]) for i in range(len(values) - delay*(order + 1))])
+  mapped_permutations = np.array([np.argsort([values[i+ord*delay] for ord in range(order)]) for i in range(len(values) - delay*(order - 1))])
   str_permutations = list(map(str,mapped_permutations))
   return str_permutations  
 
