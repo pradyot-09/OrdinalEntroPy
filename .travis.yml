@@ -16,4 +16,5 @@ script:
   - cd tests
   - python -m unittest test_OrdinalEntroPy.TestEntropy
 
-
+after_success:
+  - codecov
