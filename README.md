@@ -29,8 +29,8 @@ important:
 ```  
   **Dependencies**
 
-- `numpy <https://numpy.org/>`
-- `scipy <https://www.scipy.org/>`
+- [Numpy](https://numpy.org/)
+- [Scipy](https://www.scipy.org/)
 
 
 Functions
@@ -65,9 +65,9 @@ output entropy value :
 Development
 ===========
 
-OrdinalEntroPy was created and is maintained by `Pradyot Patil <https://pradyot-09.github.io/>`_. Contributions are more than welcome so feel free to contact me, open an issue or submit a pull request!
+OrdinalEntroPy was created and is maintained by [Pradyot Patil](https://pradyot-09.github.io/). Contributions are more than welcome so feel free to contact me, open an issue or submit a pull request!
 
-To see the code or report a bug, please visit the `GitHub repository <https://github.com/pradyot-09/OrdinalEntroPy>`.
+To see the code or report a bug, please visit the [GitHub repository](https://github.com/pradyot-09/OrdinalEntroPy).
 
 Note that this program is provided with **NO WARRANTY OF ANY KIND**. If you can, always double check the results.
 
