@@ -28,6 +28,11 @@ class TestEntropy(unittest.TestCase):
             PE(BANDT_PERM, order=3, delay=0.5)
         with self.assertRaises(ValueError):
             PE(BANDT_PERM, order=1, delay=1)
+
+    def test_WPE(self):
+        WPE(BANDT_PERM,order=3,delay=1,normalize=True)
+        with self.assertRaises(ValueError):
+            WPE(BANDT_PERM, order=4, delay=3)
         
     def test_DE(self):
         DE(x_de, order=2,classes=3,delay=2,normalize=True)
@@ -49,6 +54,8 @@ class TestEntropy(unittest.TestCase):
         RDE(RANDOM_TS, order=2,classes=3,delay=2,normalize=True)
         RDE(RANDOM_TS, order=3,classes=3,normalize=True)
         self.assertEqual(np.round(RDE(BANDT_PERM, order=2,classes=3), 3), 0.125)
+        with self.assertRaises(ValueError):
+            RDE(BANDT_PERM, order=4,classes=3, delay=3)
     
     def test_RWDE(self):
         RDE(RANDOM_TS, order=2,classes=3,delay=2,normalize=True)
