@@ -64,7 +64,7 @@ class TestEntropy(unittest.TestCase):
         with self.assertRaises(ValueError):
             RDE(BANDT_PERM, order=3, classes=3, delay=0.5)
         with self.assertRaises(ValueError):
-            RDE(BANDT_PERM, order=1, classes=3 delay=1)
+            RDE(BANDT_PERM, order=1, classes=3, delay=1)
     
     def test_RWDE(self):
         RDE(RANDOM_TS, order=2,classes=3,delay=2,normalize=True)
