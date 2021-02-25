@@ -17,4 +17,4 @@ script:
   - python -m unittest test_OrdinalEntroPy.TestEntropy
 
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
