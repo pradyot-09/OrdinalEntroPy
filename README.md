@@ -33,12 +33,41 @@ important:
 - `scipy <https://www.scipy.org/>`
 
 
+Functions
+============
+
+code : 
+```python
+
+from OrdinalEntroPy import *
+import numpy as np
+np.random.seed(1234567)
+x = np.random.rand(3000)
+print(PE(x, order=3, normalize=True))                        # Permutation entropy
+print(WPE(x, order=3, normalize=True))                       # Weighted Permutation Entropy
+print(RPE(x, order=3, delay=1, normalize=True))              # Reverse Permutation Entropy
+print(DE(x, order=3,classes=3, normalize=True))              # Dispersion Entropy
+print(RDE(x, order=3,classes=3,delay=1,normalize=True))      # Reverse Dispersion Entropy
+print(RWDE(x, order=3,classes=3,delay=1,normalize=True))     # Reverse Weighted Dispersion Entropy
+
+```
+output entropy value :
+```
+0.9995858289645746
+0.9996533403383996
+0.0002963060541583906
+0.9830685145488814
+0.00418284021851621
+0.026268994085565402
+```
+
+
 Development
 ===========
 
 OrdinalEntroPy was created and is maintained by `Pradyot Patil <https://pradyot-09.github.io/>`_. Contributions are more than welcome so feel free to contact me, open an issue or submit a pull request!
 
-To see the code or report a bug, please visit the `GitHub repository <https://github.com/pradyot-09/OrdinalEntroPy>`_.
+To see the code or report a bug, please visit the `GitHub repository <https://github.com/pradyot-09/OrdinalEntroPy>`.
 
 Note that this program is provided with **NO WARRANTY OF ANY KIND**. If you can, always double check the results.
 
