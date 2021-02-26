@@ -8,7 +8,7 @@ from .utils import *
 
  
 # Permutation Entropy
-  """Permutation Entropy.
+"""Permutation Entropy.
 
   
   Parameters
@@ -65,7 +65,7 @@ from .utils import *
   >>> # Return a value comprised between 0 and 1.
   >>> print(PE(x, order=3, normalize=True))
   0.5887621559162939
-  """
+"""
 def PE(values,order=3,delay=1,normalize=True):
 
   # get all the permuations
@@ -88,7 +88,7 @@ def PE(values,order=3,delay=1,normalize=True):
 
 
 
-  """Dispersion Entropy.
+"""Dispersion Entropy.
 
   
   Parameters
@@ -140,7 +140,7 @@ def PE(values,order=3,delay=1,normalize=True):
   >>> # Return a value in bit between 0 and log2(factorial(order))
   >>> print(DE(x, order=3,classes=3,normalize=True))
   0.9830685145488814
-  """
+"""
 
 # Dispersion Entropy
 def DE(values,order=3,classes=3,delay=1,normalize=True):
