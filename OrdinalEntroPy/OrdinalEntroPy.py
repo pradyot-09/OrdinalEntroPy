@@ -4,11 +4,9 @@ import math
 
 from .utils import *
 
- """
-A lot of comments and documentation is directly copied from Raphael Vallat (https://github.com/raphaelvallat/entropy)
+ # A lot of comments and documentation is directly copied from Raphael Vallat (https://github.com/raphaelvallat/entropy)
 
- """   
-
+ 
 # Permutation Entropy
   """Permutation Entropy.
 
