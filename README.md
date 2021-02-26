@@ -1,6 +1,7 @@
 [![Python](https://img.shields.io/badge/python-3.6%20%7C%203.7-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/github/license/pradyot-09/OrdinalEntroPy)](https://github.com/pradyot-09/OrdinalEntroPy/blob/main/LICENSE)
 [![Build](https://travis-ci.com/pradyot-09/OrdinalEntroPy.svg?branch=main&status=created)](https://travis-ci.com/github/pradyot-09/OrdinalEntroPy)
+[![codecov](https://codecov.io/gh/pradyot-09/OrdinalEntroPy/branch/main/graph/badge.svg?token=25WEGNAQD7)](https://codecov.io/gh/pradyot-09/OrdinalEntroPy)
 ![stars](https://img.shields.io/github/stars/pradyot-09/OrdinalEntroPy)
 # OrdinalEntroPy
 OrdinalEntroPy is a Python 3 package providing several time efficient, ordinal pattern based entropy algorithms for computing the complexity of one-dimensional time-series. 
